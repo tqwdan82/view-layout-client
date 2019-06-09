@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="javascript/view-layout-client.js" type="text/javascript"></script>
+        <style>
+            #testContainer {
+                width: 800px;
+                height: 500px;
+                border: 1px solid #5e5e5e;
+                padding: 0;
+            }
+            
+        </style>
+		<script type="text/javascript">
+            window.onload = function(){
+				var configuration = {
+                  "colsizex":"5",
+                  "colsizey":"5",
+                  "grid":[
+                    {
+                      "posx":"1",
+                      "posy":"1",
+                      "sizex":"1",
+                      "sizey":"1",
+                      "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
+                    },
+                    {
+                      "posx":"2",
+                      "posy":"1",
+                      "sizex":"2",
+                      "sizey":"1",
+                      "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
+                    },
+                    {
+                      "posx":"2",
+                      "posy":"2",
+                      "sizex":"2",
+                      "sizey":"1",
+                      "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
+                    },
+                    {
+                      "posx":"2",
+                      "posy":"3",
+                      "sizex":"2",
+                      "sizey":"2",
+                      "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
+                    }
+                  ]
+                };
+
+                ViewLayoutClient.render(captureJsonConfiguration(), 'testContainer');
+            };
+        </script>
+    </head>
+    
+    <body>
+        <div id='testContainer'></div>
+       
+    </body>
+</html>
