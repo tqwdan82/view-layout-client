@@ -1,5 +1,5 @@
 # View-Layout-Client
-A JavaScript library that renders a layout for your page or section of page based on a configuration. View-Layout-Client is developed to assist developers to organise their page sections and load their different pages with more ease. This library is written in vanilla JavaScript using JavaScript DOM APIs.
+A JavaScript library that renders a layout for your page or section of page based on a configuration. View-Layout-Client is developed to assist developers to organise their page sections and load their different pages with more ease. This library is written in vanilla JavaScript using JavaScript DOM APIs. 
 
 ## Getting Started
 
@@ -62,6 +62,7 @@ Download view-layout-client.js and include the script to your script directory/l
 ```
 <div id='testContainer'></div>
 ```
+The library will adjust the size of the section based on the size of the container element you set.
 
 4. Register your layout configurations with View-Layout-Client to the container element
 ```
