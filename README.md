@@ -84,6 +84,7 @@ The sample will not function correctly since it is trying to load 'www.google.co
 ## Authors
 
 * **TQW** - *Initial work* - [tqwdan82](https://github.com/tqwdan82)
+* **TQW** - *Version 1.0.1* - [tqwdan82](https://github.com/tqwdan82)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project, if any.
 
