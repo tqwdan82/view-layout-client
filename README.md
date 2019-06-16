@@ -66,7 +66,8 @@ The library will adjust the size of the section based on the size of the contain
 
 4. Register your layout configurations with View-Layout-Client to the container element
 ```
-ViewLayoutClient.render(configuration, 'testContainer');
+const vClient = new ViewLayoutClient();
+vClient.render(configuration, 'testContainer');
 ```
 
 ## Sample
