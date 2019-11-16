@@ -11,46 +11,193 @@
               border: 1px solid #5e5e5e;
               padding: 0;
           }
+
+          .chevron::before {
+            border-style: solid;
+            border-width: 0.25em 0.25em 0 0;
+            content: '';
+            display: inline-block;
+            height: 0.45em;
+            left: 0.15em;
+            position: relative;
+            top: 0.15em;
+            transform: rotate(-45deg);
+            vertical-align: top;
+            width: 0.45em;
+          }
+
+          .chevron.right:before {
+            left: 0;
+            transform: rotate(45deg);
+          }
+
+          .chevron.bottom:before {
+            top: 0;
+            transform: rotate(135deg);
+          }
+
+          .chevron.left:before {
+            left: 0.25em;
+            transform: rotate(-135deg);
+          }
+		  
+		.vertAdjust{
+			visibility: hidden;
+			position: absolute;
+			top:0;
+			left:0;
+			height:100%;
+			width:10px;
+			background-color:rgba(0,0,0,0.5);
+			color:'white';
+			margin-top:1px;
+			cursor: pointer;
+		}
+		
+		.vertRight{
+			left:calc(100% - 10px);
+		}
+		
+		.vertAdjust i {
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			bottom: 50%;
+			position: absolute;
+			
+		}
+		
+		.vertAdjust .right {
+		  transform: rotate(-45deg);
+		  -webkit-transform: rotate(-45deg);
+		}
+
+		.vertAdjust .left {
+		  transform: rotate(135deg);
+		  -webkit-transform: rotate(135deg);
+		}
+		  
+		.horiAdjust{
+			visibility: hidden;
+			position: absolute;
+			bottom: 0;
+			height:10px;
+			width:100%;
+			background-color:rgba(0,0,0,0.5);
+			color:'white';
+			margin-top:1px;
+			cursor: pointer;
+		}
+		
+		.horiAdjust i {
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 4px;
+			right: 50%;
+			position: absolute;
+			
+		}
+		
+		.horiAdjust .up {
+			transform: rotate(-135deg);
+			-webkit-transform: rotate(-135deg);
+			margin-top: 3px;
+		}
+		
+		.horiAdjust .down {
+		  transform: rotate(45deg);
+		  -webkit-transform: rotate(45deg);
+		  margin-top: -3px;
+		}
             
         </style>
 		<script type="text/javascript">
             window.onload = function(){
 				var configuration = {
-                  "colsizex":"5",
-                  "colsizey":"5",
+                  "colsizex":"40",
+                  "colsizey":"40",
                   "grid":[
+					// {
+          //             "posx":"1",
+          //             "posy":"1",
+          //             "sizex":"20",
+          //             "sizey":"40",
+					  
+					//   "enable_auto_fill":true,
+					//   "enable_hor_right_resize":true,
+					//   "enable_vert_resize":true,
+					  
+          //             "content":"./page1.html"
+          //           },
+					// {
+          //             "posx":"21",
+          //             "posy":"1",
+          //             "sizex":"20",
+          //             "sizey":"40",
+					  
+					//   "enable_auto_fill":true,
+					//   "enable_hor_left_resize":true,
+          //             "content":"./page2.html"
+          //           },
                     {
                       "posx":"1",
-                      "posy":"5",
-                      "sizex":"5",
-                      "sizey":"1",
+                      "posy":"31",
+                      "sizex":"40",
+                      "sizey":"10",
                       "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
                     },
                     {
-                      "posx":"2",
+                      "posx":"10",
                       "posy":"1",
-                      "sizex":"2",
-                      "sizey":"1",
+                      "sizex":"20",
+                      "sizey":"10",
+					  
+					  "enable_vert_resize":true,
+					  "enable_auto_fill":true,
+					  "enable_hor_right_resize":true,
+
+                      "content":"https://www.google.com"
+                    },
+                    {
+                      "posx":"10",
+                      "posy":"11",
+                      "sizex":"20",
+                      "sizey":"10",
+					  
+					  "enable_vert_resize":true,
+					  "enable_hor_left_resize":true,
+					  "enable_auto_fill":true,
+
                       "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
                     },
                     {
-                      "posx":"2",
-                      "posy":"2",
-                      "sizex":"2",
-                      "sizey":"1",
+                      "posx":"1",
+                      "posy":"21",
+                      "sizex":"20",
+                      "sizey":"10",
+
+            "enable_auto_fill":true,
+					  "enable_hor_right_resize":true,
+            "enable_vert_resize":true,
+
                       "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
                     },
                     {
-                      "posx":"2",
-                      "posy":"3",
-                      "sizex":"2",
-                      "sizey":"2",
+                      "posx":"21",
+                      "posy":"21",
+                      "sizex":"20",
+                      "sizey":"10",
+            "enable_auto_fill":true,
+					  "enable_hor_left_resize":true,
+
                       "content":"https://docs.jsfiddle.net/use-cases/demos-for-products-or-libraries"
                     }
                   ]
                 };
 
-                const vClient = new ViewLayoutClient();
+                var vClient = new ViewLayoutClient();
                 vClient.render(configuration, 'testContainer');
                 
             };
